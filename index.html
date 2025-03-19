@@ -27,5 +27,62 @@
 </div>
 </div>
 
+<div id="propos">
+    <div class="container">
+        <div class="row">
+            <div class="propos-col-1">
+                <img src="images/me.jpg">
+            </div>
+            <div class="propos-col-2">
+                <h1 class="sous-titre">À propos</h1>
+                <p>Je suis Tom DUVAL, un jeune développeur informatique passioné par le domaine, et qui apprend de plus en plus tout les jours. Sérieux et motivé, j'étudie cette vocation activement. Niveau d'étude actuel : BAC+1 </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('compétences')">Compétences</p>
+                    <p class="tab-links" onclick="opentab('expériences')">Expériences</p>
+                    <p class="tab-links" onclick="opentab('parcours')">Parcours</p>
+                </div>
+                <div class="tab-contents active-tab" id="compétences">
+                    <ul>
+                        <li><span>C#</span><br>Développement Unity et autres</li>
+                        <li><span>Web</span><br>Développeur FullStack</li>
+                        <li><span>SQL</span><br>Configuration et mise en place de BDD</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="expériences">
+                    <ul>
+                        <li><span>2021</span><br>Stage Hôtelrie-restauration - juin</li>
+                        <li><span>2025</span><br>Stage Maintenance Informatique - Mai à Juin</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="parcours">
+                    <ul>
+                        <li><span>2021-2022</span><br>Seconde général, Lycée Jean Brito</li>
+                        <li><span>2022-2024</span><br>Bac STI2D option SIN sur 2 ans, Lycée Joliot-Curie</li>
+                        <li><span>2024-2026</span><br>BTS SIO option SLAM, Pôle Sup de La Salle</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+<script src="script.js"></script>
+
 </body>
 </html>
