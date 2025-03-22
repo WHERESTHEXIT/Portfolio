@@ -169,6 +169,11 @@ nav ul li a:hover::after{
 
 .tab-contents{
     display: none;
+    border: 2px solid #fff; /* Ajoute une bordure blanche */
+    padding: 20px;
+    border-radius: 10px; /* Arrondir les coins */
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 80%;
 }
 .tab-contents.active-tab{
     display: block;
